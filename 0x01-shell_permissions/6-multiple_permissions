@@ -1,5 +1,2 @@
 #!/bin/bash
-chmod ug+x,o+r hello
-#!/bin/bash
-chmod ug+x,o+r hello
-chmod ug+x hello
+chmod 754 hello
