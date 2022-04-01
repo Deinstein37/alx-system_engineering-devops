@@ -2,3 +2,4 @@ chmod 600 hello
 #!/bin/bash
 #!/bin/bash
 chmod u+x hello
+chmod u+x hello
