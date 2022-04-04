@@ -1,2 +1,1 @@
-My readme file for the shell redirection task
-My 0x02-shell_redirections readme file
+My readme file for the shell redirections task to print hello world
