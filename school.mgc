@@ -1,0 +1,167 @@
+[33mcommit 6aa763c4f6b2e494680effcc1292bea1afeee336[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Mon Apr 4 02:45:00 2022 -0700
+
+    Hello world
+
+[33mcommit 82e1b6d6c237b971293a31a68a18fdc20c6cb6e1[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 06:19:00 2022 -0700
+
+    fix bug
+
+[33mcommit c466ecef0fa44a3c0d0ef7c64bd77395191860b0[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 05:49:26 2022 -0700
+
+    fix bug
+
+[33mcommit fdec57320ff981b51b274236b1f52c43d956c964[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 05:25:46 2022 -0700
+
+    Create a magic file school.mgc that can be used with the command file to detect School data files. School data files always contain the string SCHOOL at offset 0
+
+[33mcommit 2f022cf2ef3873884eac5efd52dae08690638e8e[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 05:10:36 2022 -0700
+
+    Write a command that lists all the files and directories of the current directory, separated by commas (,)
+
+[33mcommit 0c2bd04d57e34ce72a4b5e4afedd16825b6136f6[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 05:03:29 2022 -0700
+
+    Create a script that creates the directories welcome/, welcome/to/ and welcome/to/school in the current director
+
+[33mcommit 98036d6ee88a57178870eec3be05749913411365[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 04:44:34 2022 -0700
+
+    Create a script that deletes all files in the current working directory that end with the character ~
+
+[33mcommit 28de85a60e6ce8b8861c73af4e3a12f3ef43a53a[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 04:38:13 2022 -0700
+
+    Create a script that moves all files beginning with an uppercase letter to the directory /tmp/u
+
+[33mcommit 05b19069cc0fb84e159d29e54c0cbbc543fd1952[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 04:30:02 2022 -0700
+
+    Create a script that moves all files beginning with an uppercase letter to the directory /tmp/u
+
+[33mcommit 8d3ec6728e183889eed423bb5c4022a6d09aa808[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 04:19:30 2022 -0700
+
+    Move the file betty from /tmp/ to /tmp/my_first_directory
+
+[33mcommit 7b574029fb0019300ad30af87dd158c104ebec57[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 04:09:41 2022 -0700
+
+    Create a symbolic link to /bin/ls, named __ls__. The symbolic link should be created in the current working directory
+
+[33mcommit dd4ad9e3ac79952f6a6a72a22b45f70cefd371d3[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 03:49:33 2022 -0700
+
+    Create a symbolic link to /bin/ls, named __ls__. The symbolic link should be created in the current working directory
+
+[33mcommit 1c3ae286e2d6ef761a468bcf26446b23549385ca[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 02:30:07 2022 -0700
+
+    Create a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory
+
+[33mcommit 9006fb2e752693e556830c623e82a1f6ad9baaab[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 02:20:34 2022 -0700
+
+    Create a symbolic link to /bin/ls, named _ls_. The symbolic link shouldbe created in the current working directory
+
+[33mcommit 5423f67a86293d93b0854a07d93cf30a6d97357b[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 02:13:37 2022 -0700
+
+    Write a script that prints the type of the file named iamafile. The file iamafile will be in the /tmp directory when we will run your script
+
+[33mcommit 1aeb8b49f76cefa8bffc3e165ea256a243e96b1b[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 02:02:44 2022 -0700
+
+    Print hidden directories and files in long format from current directory, parent directory and /boot
+
+[33mcommit 7ecaa77a062ff14ad07777ff5a2319457ba10963[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 01:55:35 2022 -0700
+
+    Write a script that changes the working directory to the previous one
+
+[33mcommit 034e4952ea16e6120049a6a596a6c6d6fb5a7f30[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 01:50:00 2022 -0700
+
+    Delete the directory my_first_directory that is in the /tmp directory
+
+[33mcommit 95a6d9feadccdea3598aa73346ca4fafa60a4224[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 01:43:10 2022 -0700
+
+    Delete the file betty. The file betty is in the /tmp/my_first_directory
+
+[33mcommit d9f13fe78582a32c1eeac1fa20e3653957de1352[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 01:33:41 2022 -0700
+
+    Move the file betty from /tmp/ to /tmp/my_first_directory
+
+[33mcommit e0055050d1a3f1f2e7c41ee76fd2570815187b28[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 01:22:33 2022 -0700
+
+    Create a script that creates a directory named my_first_directory in the /tmp/ directory
+
+[33mcommit 6f932d05a22fa62d41ca2e30790862305139561a[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 01:10:19 2022 -0700
+
+    Display current directory contents, long format with user ID and hidden files
+
+[33mcommit 92aab1ed70aec02f57e5b2ce1c66c17091950c84[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Thu Mar 31 00:55:33 2022 -0700
+
+    Display current directory contents, including hidden files (starting with .). Use the long format
+
+[33mcommit 1f2409fc2ce11fa27338102d9f963bb754f62042[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Wed Mar 30 13:22:23 2022 -0700
+
+    Display current directory contents, including hidden files (starting with .). Use the long format
+
+[33mcommit 6bb7db538b02f0834446335346dc701cdde9855d[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Wed Mar 30 13:01:28 2022 -0700
+
+    Display the contents list of your current directory
+
+[33mcommit 34f021b597f3805ff27a9f25b5257ecf9556fa33[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Wed Mar 30 12:48:00 2022 -0700
+
+    Write a script that changes the working directory to the user’s home directory
+
+[33mcommit 91364a638c63ab32959d483c9a98ef2c30d50f2a[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Wed Mar 30 11:41:43 2022 -0700
+
+    Display the content list of your current directory
+
+[33mcommit 09b87f399d41bac80c9c605f657bc2934bf050cd[m
+Author: Onolameh Daniel <djake8991@gmail.com>
+Date:   Wed Mar 30 10:44:21 2022 -0700
+
+    shell script to print current working directory
