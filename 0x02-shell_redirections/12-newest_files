@@ -1,0 +1,2 @@
+#!/bin/nash
+ls -t1 | head -n 10
