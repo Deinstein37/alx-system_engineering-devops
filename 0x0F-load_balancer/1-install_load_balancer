@@ -1,54 +1,11 @@
 #!/usr/bin/env bash
-# Installs, configures, and starts the load balancer
-sudo apt-get update
-sudo apt-get -y install --no-install-recommends software-properties-common
-sudo add-apt-repository -y ppa:vbernat/haproxy-2.4
-sudo apt-get -y install haproxy
+# configures an Nginx server to have a custom 404 page that contains the string 'Ceci n'est pas une page'
 
-# the load balancer's configuration
-DOMAIN_NAME='onolameh.tech'
-INIT_FILE='/etc/default/haproxy'
-CONFIG_FILE='/etc/haproxy/haproxy.cfg'
-HAPROXY_LB_CONFIG=\
-"
-#--$DOMAIN_NAME-params-begin--
-backend $DOMAIN_NAME-backend
-	balance roundrobin
-	server 34021-web-01 100.25.152.61:80 check
-	server 34021-web-02 18.204.11.86:80 check
-frontend $DOMAIN_NAME-frontend
-	bind *:80
-	mode http
-	default_backend $DOMAIN_NAME-backend
-#--$DOMAIN_NAME-params-end--
-"
-
-[ -f "$INIT_FILE" ] || touch "$INIT_FILE"
-[ -f "$CONFIG_FILE" ] || touch "$CONFIG_FILE"
-
-CONFIG_WORDS=$(grep -Eco "$DOMAIN_NAME-backend" < $CONFIG_FILE)
-
-if [ "$(grep -Eco '^ENABLED=[01]$' < $INIT_FILE)" -gt 0 ]; then
-	sed -i 's/^ENABLED=0$/ENABLED=1/' "$INIT_FILE"
-else
-	echo 'ENABLED=1' >> $INIT_FILE
-fi
-
-if [ "$CONFIG_WORDS" -eq 0 ]; then
-	echo -e "$HAPROXY_LB_CONFIG" >> $CONFIG_FILE
-else
-	start_tkn="#--$DOMAIN_NAME-params-begin--"
-	end_tkn="#--$DOMAIN_NAME-params-end--"
-	a=$(grep -onE "$start_tkn" < "$CONFIG_FILE" | cut -d : -f1)
-	b=$(grep -onE "$end_tkn" < "$CONFIG_FILE" | cut -d : -f1)
-	a=$((a - 1))
-	b=$((b + 1))
-	sed -i "$a,$b"d "$CONFIG_FILE"
-	echo -en "$HAPROXY_LB_CONFIG" >> $CONFIG_FILE
-fi
-
-if [ "$(pgrep -c haproxy)" -le 0 ]; then
-	service haproxy start
-else
-	service haproxy restart
-fi
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo 'Holberton School' > /var/www/html/index.nginx-debian.html
+sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
+sed -i '/server_name _;/a error_page 404 /custom_404.html;\nlocation = /custom_404.html {\nroot /usr/share/nginx/html;\ninternal;\n}' /etc/nginx/sites-available/default
+service nginx start
