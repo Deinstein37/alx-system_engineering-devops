@@ -1,4 +1,4 @@
-global
+Seeglobal
         log /dev/log    local0
         log /dev/log    local1 notice
         chroot /var/lib/haproxy
@@ -47,5 +47,5 @@ backend letsencrypt-backend
 backend web-backend
         redirect scheme https if !{ ssl_fc }
         balance roundrobin
-        server 349-web-01 35.237.142.70:80 check
-        server 349-web-02 35.231.108.250:80 check
+        server 349-web-01 100.25.152.61:80 check
+        server 349-web-02 18.204.11.86:80 check
