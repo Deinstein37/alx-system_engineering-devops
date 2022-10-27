@@ -1,24 +1,10 @@
 #!/usr/bin/env bash
-# bash script to investigate domain names
-displayParams (){
-	REC=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1 | awk '{print $4}')
-	DEST=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1 | awk '{print $5}')
-	echo "The subdomain $2 is a $REC record and points to $DEST"
-}
-
-main (){
-	if [[ $# -eq 0 ]]; then
-		return 0
-	else
-		if [[ $# -eq 2 ]]; then
-			displayParams "$1" "$2"
-			return 0
-		fi
-		displayParams "$1" "www"
-		displayParams "$1" "lb-01"
-		displayParams "$1" "web-01"
-		displayParams "$1" "web-02"
-	fi
-}
-
-main "$@"
+# Prints out information about subdomains
+if [[ "$#" -eq '1' ]]; then
+	ALL=$(dig $1)
+	echo The subdomain $() is a $() record and points to $()
+elif [[ "$#" -eq '2' ]]; then
+	ALL=$(dig $1 | grep -A1 "ANSWER SECTION:" | grep "$2" | tail -1);
+else
+	echo "Usage: ./0-world-wide-web <DOMAIN> <SUBDOMAIN>"
+fi
