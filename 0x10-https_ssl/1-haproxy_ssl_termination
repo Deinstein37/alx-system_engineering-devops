@@ -35,11 +35,11 @@ defaults
 
 frontend web-frontend
 	bind *:80
-	bind *:443 ssl crt /etc/ssl/certs/www.vabuka.tech.pem
+	bind *:443 ssl crt /etc/ssl/certs/www.onolameh.tech.pem
 	mode http
 	default_backend web-backend
 
 backend web-backend
 	balance roundrobin
-	server web-01 	100.26.135.224:80 check
-	server web-02 	3.235.226.56:80 check
+	server web-01 	100.25.152.61:80 check
+	server web-02 	18.204.11.86:80 check
