@@ -1,7 +1,4 @@
-#!/usr/bin/env bash
-# set up ufw in order to block incoming traffic except the next openssh
-
-ufw allow 22/tcp
-ufw allow 80/tcp
-ufw allow 443/tcp
-ufw enable
+sudo ufw allow ssh
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
+sudo ufw enable
